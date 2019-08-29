@@ -1,0 +1,15 @@
+C:\Users\Miikk\source\repos\chatServer\ChatServer\bin\Release\ChatServer.exe.config
+C:\Users\Miikk\source\repos\chatServer\ChatServer\bin\Release\ChatServer.exe
+C:\Users\Miikk\source\repos\chatServer\ChatServer\bin\Release\ChatServer.pdb
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.csprojAssemblyReference.cache
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\MainWindow.g.cs
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\App.g.cs
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer_MarkupCompile.cache
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer_MarkupCompile.lref
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\MainWindow.baml
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.g.resources
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.Properties.Resources.resources
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.csproj.GenerateResource.cache
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.csproj.CoreCompileInputs.cache
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.exe
+C:\Users\Miikk\source\repos\chatServer\ChatServer\obj\Release\ChatServer.pdb

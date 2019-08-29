@@ -1,0 +1,101 @@
+﻿<Window x:Name="ChatServer" x:Class="ChatServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatServer"
+        WindowState="Maximized"
+        mc:Ignorable="d" Height="376.933" Width="794.58" Background="White" Closing="Window_Closing" Activated="Window_Activated" Title="ChatServer" >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="262*" />
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="674*" />
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!--Connected clients-->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="129*" />
+                <ColumnDefinition Width="90*" />
+                <ColumnDefinition Width="97*" />
+                <ColumnDefinition Width="215*" />
+                <ColumnDefinition Width="215*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" x:Name="lblClients" Content="Connected clients:" HorizontalAlignment="Left" Margin="3,3,0,0" VerticalAlignment="Top" Height="24" Width="107"/>
+            <TextBox x:Name="txtConnectedClients" Grid.Row="0" HorizontalAlignment="Left" Height="18" Margin="110,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" IsReadOnly="True" BorderBrush="{x:Null}" Text="0" Background="{x:Null}" SelectionBrush="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblPort" Content="Listen on Port:" Grid.Column="1" HorizontalAlignment="Right" Margin="3,3,0,3" Width="85" />
+            <TextBox x:Name="txtPort" Grid.Column="2" Margin="0,7,0,5" VerticalAlignment="Center" HorizontalAlignment="Left" Text="5000" Width="93" Background="#FFFCFEFF" Height="18" />
+            <Button x:Name="btnStart" Content="Start server" Grid.Column="3" Margin="1" Click="BtnStart_Click" />
+            <Button x:Name="btnStop" Content="Stop server" Grid.Column="4" Margin="1" Click="BtnStop_Click" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+
+        <!-- TextMessageBox & Connected clients ListBox  -->
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="660*" />
+                <ColumnDefinition Width="120*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="txtMessagescreen" Margin="3" Grid.Column="0"  IsReadOnly="True" VerticalScrollBarVisibility="Visible" Background="White" Foreground="Black" TextChanged="TxtMessagescreen_TextChanged"  />
+            <ListBox x:Name="listBox_connectedClients"   Margin="3" Grid.Column="1" >
+
+
+                <ListBox.Resources>
+
+                    <!--Defines a context menu-->
+                    <ContextMenu x:Key="MyElementMenu">
+                        <MenuItem Header="Kick" Click="MenuItemDelete_Click"/>
+                    </ContextMenu>
+
+                    <!--Sets a context menu for each ListBoxItem in the current ListBox-->
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="ContextMenu" Value="{StaticResource MyElementMenu}"/>
+                    </Style>
+
+                </ListBox.Resources>
+
+
+
+
+
+            </ListBox>
+        </Grid>
+
+        <!--Text writing-->
+        <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="545*" />
+                <ColumnDefinition Width="121" />
+                <ColumnDefinition Width="121*" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtSendMessage"   Margin="3" Background="White"  Foreground="Black" Grid.Column="0" VerticalScrollBarVisibility="Hidden" TextWrapping="Wrap"/>
+            <Button x:Name="btnSend" Content="Send to clients" Margin="3"   Click="BtnSend_Click" IsDefault="True" Grid.Column="1"  />
+        </Grid>
+
+
+
+    </Grid>
+
+
+</Window>
