@@ -5,7 +5,6 @@ A simple TCP/IP based multithreading chat server application which is capable to
 Included features:
  - Kicking clients from the server (click the right mouse button on the listbox on the right side of the screen) 
  - Opens a file called logfile.txt when the app is opened and saves when the app is closed. If the file does not exist, a new file is created
- - Sending broadcast messages to all connected clients
  - Informs all clients when someone connects or disconnects
  
  
